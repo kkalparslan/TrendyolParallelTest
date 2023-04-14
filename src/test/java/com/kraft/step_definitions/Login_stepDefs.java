@@ -25,7 +25,6 @@ public class Login_stepDefs {
         loginPage.acceptCookiesMtd();
         loginPage.clickLoginBtn1Mtd();
     }
-
     @When("The user should enter valid mail and password")
     public void the_user_should_enter_valid_mail_and_password() {
         loginPage.enterValidCredentialMtd();
