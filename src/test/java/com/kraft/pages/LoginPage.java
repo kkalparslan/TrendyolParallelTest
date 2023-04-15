@@ -30,6 +30,9 @@ public class LoginPage extends BasePage{
     @FindBy(xpath = "//button[@id='onetrust-accept-btn-handler']")
     public WebElement cookies_loc;
 
+    @FindBy(xpath = "//span[@class='message']")
+    public WebElement warningMessage_loc;
+
     public void acceptCookiesMtd(){
         cookies_loc.click();
     }
@@ -47,10 +50,9 @@ public class LoginPage extends BasePage{
     }
 
     public void clickLoginBtn2Mtd(){
-        girisYap2_loc.click();
+        BrowserUtils.waitForClickablility(girisYap2_loc, 5).click();
         BrowserUtils.waitFor(1);
     }
-
     public void verifyCurrentUrl(){
         String expectedUrl="https://www.trendyol.com/butik/liste/2/erkek";
         String actualUrl=driver.getCurrentUrl();
@@ -58,6 +60,13 @@ public class LoginPage extends BasePage{
         System.out.println("actualUrl = " + actualUrl);
         Assert.assertEquals(expectedUrl, actualUrl);
     }
+
+    public void loginUserMtd(String email, String password){
+        emailBox_loc.sendKeys(email);
+        passwordBox_loc.sendKeys(password);
+        girisYap2_loc.click();
+    }
+
 
 
 }
