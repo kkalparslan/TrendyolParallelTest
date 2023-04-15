@@ -1,5 +1,6 @@
 package com.kraft.pages;
 
+import com.kraft.utilities.BrowserUtils;
 import com.kraft.utilities.ConfigurationReader;
 import com.kraft.utilities.Driver;
 import org.junit.Assert;
@@ -35,21 +36,23 @@ public class LoginPage extends BasePage{
 
     public void clickLoginBtn1Mtd(){
         girisYap_loc1.click();
+        BrowserUtils.waitFor(1);
     }
     public void enterValidCredentialMtd(){
         String username= ConfigurationReader.get("userEmail");
         String password= ConfigurationReader.get("password");
-
         emailBox_loc.sendKeys(username);
         passwordBox_loc.sendKeys(password);
+        BrowserUtils.waitFor(2);
     }
 
     public void clickLoginBtn2Mtd(){
         girisYap2_loc.click();
+        BrowserUtils.waitFor(1);
     }
 
     public void verifyCurrentUrl(){
-        String expectedUrl="https://www.trendyol.com/giris?cb=https%3A%2F%2Fwww.trendyol.com%2F";
+        String expectedUrl="https://www.trendyol.com/butik/liste/2/erkek";
         String actualUrl=driver.getCurrentUrl();
         System.out.println("expectedUrl = " + expectedUrl);
         System.out.println("actualUrl = " + actualUrl);

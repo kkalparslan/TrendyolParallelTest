@@ -1,5 +1,6 @@
 package com.kraft.step_definitions;
 
+import com.kraft.utilities.BrowserUtils;
 import com.kraft.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -22,6 +23,7 @@ public class Hooks {
             final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot,"image/png","screenshot");
         }
+        BrowserUtils.waitFor(2);
         Driver.closeDriver();
     }
 }
