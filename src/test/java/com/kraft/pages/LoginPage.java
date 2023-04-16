@@ -67,5 +67,4 @@ public class LoginPage extends BasePage{
         BrowserUtils.waitFor(1);
         girisYap2_loc.click();
     }
-
 }
