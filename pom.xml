@@ -55,6 +55,9 @@
                 <version>3.0.0-M6</version>
                 <configuration>
 
+                    <parallel>methods</parallel>
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
+
                     <testFailureIgnore>true</testFailureIgnore>
                     <runOrder>Alphabetical</runOrder>
                     <!-- <rerunFailingTestsCount>1</rerunFailingTestsCount> -->

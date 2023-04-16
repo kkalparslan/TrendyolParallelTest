@@ -64,9 +64,8 @@ public class LoginPage extends BasePage{
     public void loginUserMtd(String email, String password){
         emailBox_loc.sendKeys(email);
         passwordBox_loc.sendKeys(password);
+        BrowserUtils.waitFor(1);
         girisYap2_loc.click();
     }
-
-
 
 }

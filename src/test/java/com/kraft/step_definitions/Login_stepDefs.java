@@ -46,10 +46,12 @@ public class Login_stepDefs {
     @When("The user should input invalid {string} and_or {string}")
     public void theUserShouldInputInvalidAnd_or(String email, String password) {
         loginPage.loginUserMtd(email, password);
+        BrowserUtils.waitFor(2);
     }
     @Then("The user should be able to see the warning message as {string}")
     public void theUserShouldBeAbleToSeeTheWarningMessageAs(String expectedWarningMessage) {
         String actualWarningMessage=loginPage.warningMessage_loc.getText();
         Assert.assertEquals(expectedWarningMessage,actualWarningMessage);
+        System.out.println("actualWarningMessage = " + actualWarningMessage);
     }
 }

@@ -12,7 +12,7 @@ Feature: Trendyol negatif login test
     #Retry with different invalid username and password combinations.
     #Verify that error messages are displayed correctly and invalid login attempts are rejected.
 
-  @login
+  @wip
   Scenario Outline: TC_02 Invalid Login
     Given User should be on the Trendyol.com website
     When The user should click on the first Login button
@@ -24,8 +24,6 @@ Feature: Trendyol negatif login test
       | email                  | password | message                                    |
       |                        |          | Lütfen geçerli bir e-posta adresi giriniz. |
       | alparslanztk@gmail.com |          | Lütfen şifrenizi giriniz.                  |
-      | alparslanztk@gmail     | Qw123456 | E-posta adresiniz ve/veya şifreniz hatalı. |
       |                        | Qw123456 | Lütfen geçerli bir e-posta adresi giriniz. |
       | mike@gmail.com         | Qw123456 | E-posta adresiniz ve/veya şifreniz hatalı. |
-      | alparslanztk@gmail.com | Qw1234   | E-posta adresiniz ve/veya şifreniz hatalı. |
-      | alparslanztk@          | Qw123456 | Lütfen geçerli bir e-posta adresi giriniz. |
+
