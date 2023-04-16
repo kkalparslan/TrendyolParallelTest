@@ -20,7 +20,6 @@ public class Login_stepDefs {
     public void userShouldBeOnTheTrendyolComWebsite() {
         driver.get(ConfigurationReader.get("url"));
     }
-
     @When("The user should click on the first Login button")
     public void theUserShouldClickOnTheFirstLoginButton() {
         BrowserUtils.clickWithJS(loginPage.popUp_loc);
@@ -28,17 +27,14 @@ public class Login_stepDefs {
         //loginPage.acceptCookiesMtd();
         loginPage.clickLoginBtn1Mtd();
     }
-
     @When("The user should enter valid mail and password")
     public void the_user_should_enter_valid_mail_and_password() {
         loginPage.enterValidCredentialMtd();
     }
-
     @And("The user should be click on the second Login button")
     public void theUserShouldBeClickOnTheSecondLoginButton() {
         loginPage.clickLoginBtn2Mtd();
     }
-
     @Then("The user should be logged in successfully")
     public void the_user_should_be_logged_in_successfully() {
         loginPage.verifyCurrentUrl();

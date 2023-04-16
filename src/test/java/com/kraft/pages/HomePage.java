@@ -31,7 +31,4 @@ public class HomePage extends BasePage{
         actions.moveToElement(superMarket_loc).perform();
         kopekMamasi_loc.click();
     }
-
-
-
 }
