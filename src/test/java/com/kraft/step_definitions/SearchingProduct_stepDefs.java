@@ -4,9 +4,8 @@ import com.kraft.pages.HomePage;
 import com.kraft.utilities.BrowserUtils;
 import com.kraft.utilities.Driver;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+
 
 public class SearchingProduct_stepDefs {
 
