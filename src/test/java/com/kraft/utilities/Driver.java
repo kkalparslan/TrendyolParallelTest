@@ -95,9 +95,5 @@ public class Driver {
     public static void closeDriver() {
         driverPool.get().quit();
         driverPool.remove();
-
-
-
-
     }
 }

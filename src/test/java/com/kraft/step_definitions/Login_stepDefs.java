@@ -15,7 +15,6 @@ public class Login_stepDefs {
 
     LoginPage loginPage = new LoginPage();
     WebDriver driver = Driver.getDriver();
-
     @Given("User should be on the Trendyol.com website")
     public void userShouldBeOnTheTrendyolComWebsite() {
         driver.get(ConfigurationReader.get("url"));
