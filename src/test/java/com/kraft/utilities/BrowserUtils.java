@@ -27,7 +27,6 @@ public class BrowserUtils {
         }
         Driver.getDriver().switchTo().window(origin);
     }
-
     /**
      * Moves the mouse to given element
      *
@@ -38,11 +37,9 @@ public class BrowserUtils {
         actions.moveToElement(element).perform();
     }
     public static void dragAndDropBy(WebElement element,int x,int y){
-
         Actions actions=new Actions(Driver.getDriver());
         actions.dragAndDropBy(element,x,y).perform();
     }
-
     /**
      * return a list of string from a list of elements
      *
@@ -56,7 +53,6 @@ public class BrowserUtils {
         }
         return elemTexts;
     }
-
     /**
      * Extracts text from list of elements matching the provided locator into new List<String>
      *
@@ -64,7 +60,6 @@ public class BrowserUtils {
      * @return list of strings
      */
     public static List<String> getElementsText(By locator) {
-
         List<WebElement> elems = Driver.getDriver().findElements(locator);
         List<String> elemTexts = new ArrayList<>();
 
@@ -73,7 +68,6 @@ public class BrowserUtils {
         }
         return elemTexts;
     }
-
     /**
      * Performs a pause
      *
@@ -86,7 +80,6 @@ public class BrowserUtils {
             e.printStackTrace();
         }
     }
-
     /**
      * Waits for the provided element to be visible on the page
      *
