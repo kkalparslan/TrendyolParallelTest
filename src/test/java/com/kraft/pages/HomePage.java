@@ -9,7 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class HomePage extends BasePage{
-
     public void hover(WebElement element, long pause) {
         new Actions(Driver.getDriver()).moveToElement(element).pause(pause).perform();
     }
@@ -19,13 +18,10 @@ public class HomePage extends BasePage{
             hover(mainMenu,1000);
         }
     }
-
     @FindBy(xpath = "//li[@class='tab-link'][4]")
     public WebElement superMarket_loc;
-
     @FindBy(xpath = "//*[.='Köpek Maması']")
     public WebElement kopekMamasi_loc;
-
     public void pruductMtd(String product){
         Actions actions=new Actions(Driver.getDriver());
         actions.moveToElement(superMarket_loc).perform();

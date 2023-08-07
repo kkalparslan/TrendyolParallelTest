@@ -9,34 +9,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage{
-
     WebDriver driver=Driver.getDriver();
-
     @FindBy(xpath = "//div//p[.='Giriş Yap']")
     public WebElement girisYap_loc1;
-
     @FindBy(css = "#login-email")
     public WebElement emailBox_loc;
-
     @FindBy(id = "login-password-input")
     public WebElement passwordBox_loc;
-
     @FindBy(xpath = "//button[@class='q-primary q-fluid q-button-medium q-button submit']")
     public WebElement girisYap2_loc;
-
     @FindBy(xpath = "(//p[@class='link-text'])[1]")
     public WebElement hesabim_loc;
-
     @FindBy(xpath = "//button[@id='onetrust-accept-btn-handler']")
     public WebElement cookies_loc;
-
     @FindBy(xpath = "//span[@class='message']")
     public WebElement warningMessage_loc;
-
     public void acceptCookiesMtd(){
         cookies_loc.click();
     }
-
     public void clickLoginBtn1Mtd(){
         girisYap_loc1.click();
         BrowserUtils.waitFor(1);
