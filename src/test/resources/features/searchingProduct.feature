@@ -9,4 +9,4 @@ Feature: Searching Product Test
   Scenario: TC_01 searching product
     And User should hover top modul
     And User should click "Köpek Maması" under the Petshop
-    And User should scroll down the page a little.
+    Then User should scroll down the page a little.

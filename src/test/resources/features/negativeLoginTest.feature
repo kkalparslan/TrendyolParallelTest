@@ -17,7 +17,7 @@ Feature: Trendyol negatif login test
     When The user should click on the first Login button
     When The user should input invalid "<email>" and_or "<password>"
     And The user should be click on the second Login button
-    Then The user should be able to see the warning message as "<message>"
+    Then Verify that the user should be able to see the warning message as "<message>"
 
     Examples:
       | email                  | password | message                                    |

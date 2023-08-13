@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"},
         features = "src/test/resources/features",
         glue = "com/kraft/step_definitions",
-        dryRun = false,
-        tags = "@ürün"
+        dryRun = true,
+        tags = "@login"
                 )
 
 public class CukesRunner {

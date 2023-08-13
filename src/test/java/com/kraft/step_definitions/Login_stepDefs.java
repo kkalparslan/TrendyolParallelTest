@@ -34,8 +34,8 @@ public class Login_stepDefs {
     public void theUserShouldBeClickOnTheSecondLoginButton() {
         loginPage.clickLoginBtn2Mtd();
     }
-    @Then("The user should be logged in successfully")
-    public void the_user_should_be_logged_in_successfully() {
+    @Then("Verify that the user should be logged in successfully")
+    public void verify_that_the_user_should_be_logged_in_successfully() {
         loginPage.verifyCurrentUrl();
     }
     @When("The user should input invalid {string} and_or {string}")
@@ -43,8 +43,8 @@ public class Login_stepDefs {
         loginPage.loginUserMtd(email, password);
         BrowserUtils.waitFor(2);
     }
-    @Then("The user should be able to see the warning message as {string}")
-    public void theUserShouldBeAbleToSeeTheWarningMessageAs(String expectedWarningMessage) {
+    @Then("Verify that the user should be able to see the warning message as {string}")
+    public void verify_that_the_user_should_be_able_to_see_the_warning_message_as(String expectedWarningMessage) {
         String actualWarningMessage=loginPage.warningMessage_loc.getText();
         Assert.assertEquals(expectedWarningMessage,actualWarningMessage);
         System.out.println("actualWarningMessage = " + actualWarningMessage);
