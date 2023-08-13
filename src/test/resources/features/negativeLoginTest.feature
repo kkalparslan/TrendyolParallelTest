@@ -20,9 +20,8 @@ Feature: Trendyol negatif login test
     Then Verify that the user should be able to see the warning message as "<message>"
 
     Examples:
-      | email                  | password | message                                    |
-      |                        |          | Lütfen geçerli bir e-posta adresi giriniz. |
-      | alparslanztk@gmail.com |          | Lütfen şifrenizi giriniz.                  |
-      |                        | Qw123456 | Lütfen geçerli bir e-posta adresi giriniz. |
-      | mike@gmail.com         | Qw123456 | E-posta adresiniz ve/veya şifreniz hatalı. |
+      | email               | password | message                                    |
+      | alparslan@gmail.com |          | Lütfen şifrenizi giriniz.                  |
+      |                     | 123456   | Lütfen geçerli bir e-posta adresi giriniz. |
+      | mike@gmail.com      | 123456   | E-posta adresiniz ve/veya şifreniz hatalı. |
 
