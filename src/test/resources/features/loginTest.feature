@@ -13,7 +13,7 @@ Feature: Trendyol Login Test
   #Navigate to the user's account page and verify that the user's account information is displayed correctly.
 
 
-  @login
+  @wip
   Scenario: TC_01 Valid Login
     Given User should be on the Trendyol.com website
     When The user should click on the first Login button

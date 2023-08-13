@@ -5,7 +5,7 @@ Feature: Searching Product Test
     And The user should enter valid mail and password
     And The user should be click on the second Login button
 
-    @ürün
+    @wip
   Scenario: TC_01 searching product
     And User should hover top modul
     And User should click "Köpek Maması" under the Petshop
