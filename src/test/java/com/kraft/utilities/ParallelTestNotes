@@ -1,9 +1,9 @@
-1- birden fazla testi aynı anda birden fazla browser da yürütebilmek için pom xml e aşağıdaki
-eklemeyi yaptık
+1- Birden fazla testi aynı anda birden fazla browser da yürütebilmek için pom xml e aşağıdaki
+eklemeyi yaptık;
         <parallel>methods</parallel>
         <useUnlimitedThreads>true</useUnlimitedThreads>
 
-2- standart singleton driver ımızı değiştirerek özellikle yeni driverin içindeki aşağıdaki kodun
+2- Standart singleton driver ımızı değiştirerek özellikle yeni driverin içindeki aşağıdaki kodun
 ve pom xml e yüklediğimiz eklenti ile aynı anda kaç feature da aynı tag isimli senaryo var ise o
 kadar browser açarak testlerimizi yürütmemize imkan tanımış olduk.
 String browser = System.getProperty("browser") != null ? browser = System.getProperty("browser") :
@@ -11,9 +11,10 @@ ConfigurationReader.get("browser");
 
 3- Mevcut testlerimizin hepsi de aynı tag e sahip olsalar bile cukes runner dan çalıştırdığımızda
 testleri sırası ile yürütecektir. Testleri paralel olarak koşturmak için terminalden mvn verify yapmalıyız.
-4- paralel testleri farklı bir browserda koşturmak için aşağıdaki komutu vermemiz gerekiyor;
+4- Paralel testleri farklı bir browserda koşturmak için aşağıdaki komutu vermemiz gerekiyor;
                 mvn verify -Dbrowser=firefox/edge vb
+                ------------------------------------
 
-4- cukes runner da hangi @tag tanımlı olursa olsun aşağıdaki kodu girdiğimizde bu @tagin senaryolarını
-yürütüyor
+5- Cukes Runner da hangi @tag tanımlı olursa olsun aşağıdaki kodu girdiğimizde bu @tagin senaryolarını
+yürütüyor.
                 mvn verify "-Dcucumber.filter.tags= @sss"
