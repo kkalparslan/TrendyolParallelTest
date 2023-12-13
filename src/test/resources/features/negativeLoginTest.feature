@@ -1,7 +1,9 @@
 Feature: Trendyol negatif login test
     #Description:
-    #This test case is used to test the login process on Trendyol.com website with an INVALID username and password combination.
+    #This test case is used to test the login process on Trendyol.com website with an
+    # INVALID username and password combination.
     #Steps:
+    #------
     #Access Trendyol.com website.
     #Click on the "Login" button on the homepage.
     #Enter an invalid username and password combination in the respective fields.
