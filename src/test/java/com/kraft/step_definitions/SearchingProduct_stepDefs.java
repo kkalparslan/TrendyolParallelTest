@@ -10,7 +10,6 @@ import org.openqa.selenium.JavascriptExecutor;
 
 
 public class SearchingProduct_stepDefs {
-
     HomePage homePage=new HomePage();
    // WebDriver driver= Driver.getDriver();
     @And("User should hover top modul")
