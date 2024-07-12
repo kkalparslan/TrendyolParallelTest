@@ -12,7 +12,6 @@ Feature: Trendyol Login Test
   #Check for the presence of user-specific information, such as username or profile picture, indicating a successful login.
   #Navigate to the user's account page and verify that the user's account information is displayed correctly.
 
-
   @login
   Scenario: TC_01 Valid Login
     Given User should be on the Trendyol.com website

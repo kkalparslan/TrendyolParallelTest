@@ -1,4 +1,5 @@
 Feature: Searching Product Test
+
   Background:
     Given User should be on the Trendyol.com website
     When The user should click on the first Login button

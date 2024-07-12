@@ -27,10 +27,12 @@ public class LoginPage extends BasePage{
     public void acceptCookiesMtd(){
         cookies_loc.click();
     }
+
     public void clickLoginBtn1Mtd(){
         girisYap_loc1.click();
         BrowserUtils.waitFor(1);
     }
+
     public void enterValidCredentialMtd(){
         String username= ConfigurationReader.get("userEmail");
         String password= ConfigurationReader.get("password");
@@ -43,6 +45,7 @@ public class LoginPage extends BasePage{
         BrowserUtils.waitForClickablility(girisYap2_loc, 5).click();
         BrowserUtils.waitFor(1);
     }
+
     public void verifyCurrentUrl(){
         String expectedUrl="https://www.trendyol.com/butik/liste/2/erkek";
         String actualUrl=driver.getCurrentUrl();
