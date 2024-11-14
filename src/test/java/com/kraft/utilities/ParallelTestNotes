@@ -13,10 +13,11 @@ ConfigurationReader.get("browser");
 
 3- Mevcut testlerimizin hepsi de aynı tag e sahip olsalar bile cukes runner dan çalıştırdığımızda
 testleri sırası ile yürütecektir. Testleri paralel olarak koşturmak için terminalden mvn verify yapmalıyız.
+
+
 4- Paralel testleri farklı bir browserda koşturmak için aşağıdaki komutu vermemiz gerekiyor;
                 mvn verify -Dbrowser=firefox/edge vb
                 ------------------------------------
-
 
 5- Cukes Runner da hangi @tag tanımlı olursa olsun aşağıdaki kodu girdiğimizde bu @tagin senaryolarını
 yürütüyor.
